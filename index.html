@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Question For You</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="floating-hearts" id="floatingHearts" aria-hidden="true"></div>
+
+<main class="stage">
+
+  <!-- Screen 1: The Ask -->
+  <section class="screen active" id="screen-ask">
+    <div class="card">
+      <p class="emoji">💌</p>
+      <h1>Will you go on a date with me?</h1>
+      <div class="button-row">
+        <button class="btn btn-yes" id="yesBtn1">Yes</button>
+        <button class="btn btn-no" id="noBtn1">No</button>
+      </div>
+      <p class="hint" id="hint1"></p>
+    </div>
+  </section>
+
+  <!-- Screen 2: When are you free -->
+  <section class="screen" id="screen-when">
+    <div class="card">
+      <p class="emoji">📅</p>
+      <h1>So... when are you free?</h1>
+      <div class="form-group">
+        <label for="dateInput">Pick a date</label>
+        <input type="date" id="dateInput" required>
+      </div>
+      <div class="form-group">
+        <label for="timeInput">Pick a time</label>
+        <input type="time" id="timeInput" required>
+      </div>
+      <button class="btn btn-yes btn-wide" id="continueBtn2" disabled>Continue</button>
+    </div>
+  </section>
+
+  <!-- Screen 3: Food choice -->
+  <section class="screen" id="screen-food">
+    <div class="card">
+      <p class="emoji">🍽️</p>
+      <h1>Where should we eat?</h1>
+      <div class="food-grid" id="foodGrid">
+        <button class="food-option" data-food="Pizza"><span class="food-emoji">🍕</span>Pizza</button>
+        <button class="food-option" data-food="Sushi"><span class="food-emoji">🍣</span>Sushi</button>
+        <button class="food-option" data-food="Burgers"><span class="food-emoji">🍔</span>Burgers</button>
+        <button class="food-option" data-food="Pasta"><span class="food-emoji">🍝</span>Pasta</button>
+        <button class="food-option" data-food="Tacos"><span class="food-emoji">🌮</span>Tacos</button>
+        <button class="food-option" data-food="Ramen"><span class="food-emoji">🍜</span>Ramen</button>
+      </div>
+      <button class="btn btn-yes btn-wide" id="continueBtn3" disabled>Continue</button>
+    </div>
+  </section>
+
+  <!-- Screen 4: Flowers -->
+  <section class="screen" id="screen-flowers">
+    <div class="card">
+      <p class="emoji">🥰</p>
+      <h1>Glad you didn't say no.</h1>
+      <h2>Flowers, or no?</h2>
+      <div class="button-row">
+        <button class="btn btn-yes" id="flowersYes">Yes please</button>
+        <button class="btn btn-no" id="flowersNo">No thanks</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screen 5: Final -->
+  <section class="screen" id="screen-final">
+    <div class="card">
+      <p class="emoji">🚗💕</p>
+      <h1 id="finalMessage">Be ready by...</h1>
+      <p class="summary" id="summary"></p>
+    </div>
+  </section>
+
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
